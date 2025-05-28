@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 100px;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    transform: translateZ(-490px) scale(6);
+}
+
+.foreground {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-200px) scale(2);
+    top: 700px;
+}
+
+.head {
+    position: absolute;
+    color: #ffd0e9;
+
+}
+
+.head.top {
+    top: 1rem;
+    font-size: 100px;
+    transform: translateZ(-100px);
+}
+
+.head.bottom {
+    top: 10rem;
+    font-size: 150px;
+    transform: translateZ(-100px);
+}
+
+.sections {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.bg1 {
+    background-image: url(image.png);
+
+}
+
+.bg2 {
+    background-image: url(comp.png);
+
+}
+
+.bg3 {
+    background-image: url(lake.png);
+
+}
+
+.secHeading {
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    /* height: auto; */
+    background-attachment: fixed;
+    background-position: center;
+    height: 500px;
+    background-size: cover;
+}
+
+.desc {
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
